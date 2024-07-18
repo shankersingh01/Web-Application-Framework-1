@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      body {
+        background-color: #663399;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        padding: 10px;
+        /* background-color: blueviolet; */
+      }
+
+      .grid-item {
+        text-align: center;
+        padding: 20px 0;
+        color: white;
+        font-size: 16px;
+      }
+
+      .grid-item:nth-child(1) {
+        grid-column: 1 / span 2;
+        background-color: rgb(164, 111, 214);
+      }
+
+      .grid-item:nth-child(2) {
+        grid-column: 2 / span 2;
+        background-color: rgb(85, 36, 130);
+      }
+
+      .grid-item:nth-child(3) {
+        grid-column: 3;
+        background-color: rgb(56, 29, 80);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">Item One</div>
+      <div class="grid-item">Item Two</div>
+      <div class="grid-item">Item Three</div>
+    </div>
+  </body>
 </html>
