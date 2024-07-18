@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form action="" enctype="multipart/form-data" method="get">
+      <div>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          value=""
+          placeholder="Enter the name"
+          required
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter email" required />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" />
+      </div>
+      <div>
+        <label for="phone">Phone number</label>
+        <input type="tel" name="phone" id="phone" maxlength="10" />
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="1" max="150" step="1" />
+      </div>
+      <div>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female" />
+      </div>
+      <div>
+        <label for="date">Date of Birth</label>
+        <input type="date" name="date" id="date" min="2019-06-10" />
+      </div>
+      <div>
+        <label for="eye">Eye Color</label>
+        <select name="eye" id="eye" multiple>
+          <option value="brown">Brown</option>
+          <option value="green">Green</option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="black">Black</option>
+        </select>
+      </div>
+      <div>
+        Favorite Food
+        <div>
+          <label for="apple">Apple</label>
+          <input type="checkbox" name="apple" id="apple" />
+        </div>
+        <div>
+          <label for="mango">Mango</label>
+          <input type="checkbox" name="mango" id="mango" />
+        </div>
+      </div>
+      <div>
+        <label for="bio">Bio</label>
+        <textarea name="bio" id="bio">My name is Shanker Singh</textarea>
+      </div>
+      <div>
+        <label for="url">URL</label>
+      </div>
+      <input type="hidden" name="hidden" value="I am hidden" />
+      <div>
+        <label for="search">Search here</label>
+        <input
+          type="search"
+          name="search"
+          value="search"
+          placeholder="Search"
+        />
+      </div>
+      <div>
+        <label for="file"> File</label>
+        <input type="file" name="file" id="file" />
+      </div>
+      <div>
+        <label for="color">Color</label>
+        <input type="color" name="color" id="color" />
+      </div>
+      <div>
+        Book appointment
+        <input type="time" name="time" value="time" />
+      </div>
+      <div>
+        How happy you are?
+        <input type="range" min="1" max="10" value="5" />
+      </div>
+      <div>
+        <label for="feedback">Feedback</label>
+        <input type="feedback" name="feedback" list="feedback" />
+        <datalist id="feedback">
+          <select>
+            <option value="good"></option>
+            <option value="good I am happy"></option>
+            <option value="awesome"></option>
+          </select>
+        </datalist>
+      </div>
+      <div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 3rem;
+    background-color: #f0f0f0;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.break {
+    background-color: #ffeb3b;
+    position: relative;
+}
+.break span {
+    display: inline-block;
+    transform: rotate(270deg);
+    transform-origin: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(270deg);
+}

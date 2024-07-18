@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between items */
+    max-width: 1200px; /* Maximum width of the grid */
+}
+
+.item {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust to have 3 items per row */
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 8px; /* Optional: To give the images rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: To give the images a slight shadow */
+}

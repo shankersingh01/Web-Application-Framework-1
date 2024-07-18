@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Tag</title>
+  </head>
+  <body>
+    <style>
+      video {
+        width: 50%;
+        height: auto;
+      }
+      .iframe-16-9 {
+        aspect-ratio: 16/9;
+        max-width: 100%;
+      }
+    </style>
+
+    <!-- <video controls preload="auto" loop poster="angrycat.webp">
+      <source src="" type="video/super8" />
+      <source src="" type="video/mp4" />
+      <p>
+        <b>Download Video: </b>
+        MP4 Format:
+        <a href="">"MP4"</a>
+      </p>
+    </video> -->
+
+    <img
+      src="angrycat.webp"
+      alt="A rendering of the home page"
+      loading="lazy"
+    />
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/DCoIeGt4g7M?si=UqLiqdxlXUVR5fVX"
+      title="YouTube video player"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
