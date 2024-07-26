@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nth Child Selector</title>
+    <style>
+      div:nth-child(1) {
+        background-color: aliceblue;
+      }
+      div:nth-child(2) {
+        background-color: rgb(160, 183, 203);
+      }
+      li:nth-child(2n + 3) {
+        background-color: rgb(209, 218, 219);
+      }
+      li:nth-child(1) {
+        background-color: rgba(23, 153, 168, 0.34);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>This is some text</p>
+    </div>
+
+    <div>
+      <p>This is some text</p>
+    </div>
+
+    <div>
+      <p>This is some text</p>
+    </div>
+
+    <ul>
+      <li>First list item</li>
+      <li>Second list item</li>
+      <li>Third list item</li>
+      <li>Fourth list item</li>
+      <li>Fifth list item</li>
+    </ul>
+  </body>
+</html>

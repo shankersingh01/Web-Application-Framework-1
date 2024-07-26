@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .exciting-text::after {
+        content: "<- Exciting!";
+        color: green;
+      }
+      .boring-text::before {
+        content: "Boring ->";
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="boring-text"></p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tempore
+      quia repudiandae eligendi vel voluptatibus deserunt saepe, odit obcaecati
+      id libero distinctio non dicta natus tempora harum quaerat nemo! Corporis!
+    </p>
+    <p class="exciting-text"></p>
+  </body>
+</html>
