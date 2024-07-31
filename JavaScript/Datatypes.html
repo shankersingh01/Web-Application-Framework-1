@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      //Numbers
+      let a = 10;
+      let b = 20;
+      document.write(a + b + "<br>");
+
+      //Strings:
+      var color = "Yellow";
+      document.write(color.charAt(2) + "<br>");
+      document.write(color.indexOf("o") + "<br>");
+      document.write(color.substring(2, 6) + "<br>");
+      document.write(color.toUpperCase() + "<br>");
+
+      //Booleans
+      let x = 5;
+      let y = 5;
+      let z = 6;
+      document.getElementById("demo").innerHTML = (x == y) + "<br>";
+
+      //Array object:
+      const cars = ["Saab", "Volvo", "BMW"];
+      document.write(cars[0] + "<br>");
+
+      //Object
+      const person = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+      };
+
+      //type of
+      document.write(typeof big + "<br>");
+
+      //symbol
+      let sym = Symbol("Hello");
+      document.write(typeof sym);
+      document.write(sym);
+    </script>
+  </body>
+</html>

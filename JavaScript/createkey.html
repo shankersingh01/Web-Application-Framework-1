@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let Student = {
+        name: "Lisa",
+        age: 24,
+        marks: 78.9,
+        display() {
+          document.write("Name: ", this.name);
+        },
+      };
+
+      //create object from Student prototype
+      let std1 = Object.create(Student);
+      std1.name = "Sanika";
+      std1.display();
+    </script>
+  </body>
+</html>

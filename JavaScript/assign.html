@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fighter = new freedomFighter("Rani", "Lakshmi", 29, "Jhansi");
+      document.write(
+        fighter.firstName +
+          " " +
+          fighter.lastName +
+          " " +
+          fighter.age +
+          " " +
+          fighter.place +
+          " " +
+          "."
+      );
+      //Create Target Object
+      const person1 = {
+        firstName: "Shanker",
+        lastName: "Singh",
+        age: 24,
+        eyeColor: "blue",
+      };
+
+      //Assign Source to Target
+      Object.assign(person1, person2);
+
+      //Display Target
+      let text = Object.entries(person2);
+      document.write(text);
+    </script>
+  </body>
+</html>
