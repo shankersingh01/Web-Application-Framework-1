@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Stacking Order</title>
+    <style>
+      .layer1style {
+        border: solid thick;
+        padding: 1em;
+        width: 400px;
+        background-color: #ff9933;
+        position: absolute;
+        top: 200px;
+        left: 400px;
+        z-index: 1;
+      }
+
+      .layer2style {
+        border: solid thick;
+        padding: 1em;
+        width: 400px;
+        background-color: white;
+        position: absolute;
+        top: 220px;
+        left: 420px;
+        z-index: 2;
+      }
+
+      .layer3style {
+        border: solid thick;
+        padding: 1em;
+        width: 400px;
+        background-color: green;
+        position: absolute;
+        top: 240px;
+        left: 440px;
+        z-index: 3;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var topLayer = "layer1";
+      var origpos;
+      function mover(toTop, pos) {
+        var newTop = document.getElementById(toTop).style;
+        newTop.zIndex = "10";
+        topLayer = document.getElementById(toTop).id;
+        origpos = pos;
+      }
+      function moveBack() {
+        document.getElementById(topLayer).style.zIndex = origpos;
+      }
+    </script>
+  </head>
+  <body bgcolor="#984969">
+    <h2><center>Stacking Elements</center></h2>
+    <hr />
+    <hr />
+    <div
+      style="z-index: 1"
+      class="layer1style"
+      id="layer1"
+      onmouseover="mover('layer1','1')"
+      onmouseout="moveBack()"
+    >
+      PESU, RR campus <br />
+    </div>
+    <div
+      style="z-index: 2"
+      class="layer2style"
+      id="layer2"
+      onmouseover="mover('layer2','2')"
+      onmouseout="moveBack()"
+    >
+      PESU, RR campus <br />
+    </div>
+    <div
+      style="z-index: 3"
+      class="layer3style"
+      id="layer3"
+      onmouseover="mover('layer3','3')"
+      onmouseout="moveBack()"
+    >
+      PESU, HN campus <br />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Elements</title>
+    <script type="text/javascript" src="/mover.js"></script>
+  </head>
+  <body>
+    <form action=" ">
+      <p>
+        <label>
+          <b>X Coordinate: </b>
+          <input type="text" id="leftCoord" size="3" />
+        </label>
+        <br />
+        <label>
+          <b>Y Coordinate: </b>
+          <input type="text" id="topCoord" size="3" />
+        </label>
+        <br />
+        <input
+          type="button"
+          value="Move it"
+          onclick="moveIt('frog',document.getElementById('topCoord').value, document.getElementById('leftCoord').value)"
+        />
+      </p>
+    </form>
+    <div id="frog" style="position: absolute; top: 115px; left: 0">
+      <img src="/Frog.webp" width="150" height="150" alt="(Jumping Frog)" />
+    </div>
+  </body>
+</html>

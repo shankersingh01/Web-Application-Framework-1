@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Design Example</title>
+    <style>
+      /* Reset some default browser styles */
+      body,
+      h1,
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Fluid layout using Flexbox */
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      /* Responsive image */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Text shadow */
+      h1 {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Box shadow */
+      .content {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        margin: 20px 0;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      /* Background gradient */
+      body {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+      }
+
+      /* Multiple background images */
+      .multiple-backgrounds {
+        background-image: url("image1.jpg"), url("image2.jpg");
+        background-position: left top, right bottom;
+        background-repeat: no-repeat;
+      }
+
+      /* Flexbox for responsive layout */
+      .flexbox-example {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .flexbox-example div {
+        flex: 1 1 100px;
+        margin: 10px;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Typography */
+      h2 {
+        font-family: "Arial", sans-serif;
+        color: #333;
+      }
+
+      /* CSS Color formats and alpha transparency */
+      .color-example {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Form styling */
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      input,
+      select,
+      textarea {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+
+      /* Repeating gradient */
+      .repeating-gradient {
+        background: repeating-linear-gradient(
+          45deg,
+          #6b6b6b,
+          #6b6b6b 10px,
+          #a5a5a5 10px,
+          #a5a5a5 20px
+        );
+        padding: 20px;
+        color: #fff;
+      }
+
+      /* Semantic elements */
+      header,
+      nav,
+      section,
+      article,
+      aside,
+      footer {
+        padding: 10px;
+        margin: 10px 0;
+        background: #f1f1f1;
+      }
+      /* Navbar container */
+      nav {
+        background-color: #333; /* Background color of the navbar */
+        padding: 10px 20px; /* Padding inside the navbar */
+        display: flex; /* Use flexbox for layout */
+        justify-content: flex-end; /* Align items to the right */
+      }
+
+      /* Unordered list inside the navbar */
+      nav ul {
+        list-style: none; /* Remove bullet points */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        display: flex; /* Display list items horizontally */
+      }
+
+      /* List items inside the unordered list */
+      nav ul li {
+        margin: 0 15px; /* Horizontal space between the items */
+      }
+
+      /* Links inside the list items */
+      nav ul li a {
+        color: white; /* Text color */
+        text-decoration: none; /* Remove underline */
+        padding: 8px 16px; /* Padding inside the links */
+        display: block; /* Make the entire link area clickable */
+        transition: background-color 0.3s; /* Smooth transition for background color */
+      }
+
+      /* Hover effect for links */
+      nav ul li a:hover {
+        background-color: #575757; /* Change background color on hover */
+        border-radius: 4px; /* Slightly round the corners */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Responsive Web Design Example -->
+    <div class="container">
+      <!-- Header with a title -->
+      <header>
+        <h1>Responsive Web Design Example</h1>
+      </header>
+
+      <!-- Navigation menu -->
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main content section -->
+      <section class="content">
+        <!-- Article with a header and a paragraph -->
+        <article>
+          <header>
+            <h2>Introduction</h2>
+          </header>
+          <p class="color-example">
+            This is an example of responsive web design using HTML5 and CSS3
+            features.
+          </p>
+        </article>
+
+        <!-- Embedding media in HTML5 -->
+        <video controls width="100%">
+          <source src="video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <audio controls>
+          <source src="audio.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <!-- Fluid layout using Flexbox -->
+        <div class="flexbox-example">
+          <div>Flex Item 1</div>
+          <div>Flex Item 2</div>
+          <div>Flex Item 3</div>
+        </div>
+      </section>
+
+      <!-- Aside for related content -->
+      <aside>
+        <h2>Related Links</h2>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </aside>
+
+      <!-- Form with various input types -->
+      <section class="content">
+        <h2>Contact Us</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+
+      <!-- Footer section -->
+      <footer>
+        <p>&copy; 2024 Responsive Web Design Example</p>
+      </footer>
+    </div>
+  </body>
+</html>
