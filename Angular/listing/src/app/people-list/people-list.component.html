@@ -1,0 +1,25 @@
+<!-- src/app/people-list/people-list.component.html -->
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Age</th>
+      <th>Gmail</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people">
+      <td>{{ person.id }}</td>
+      <td>{{ person.name }}</td>
+      <td>{{ person.contact }}</td>
+      <td>{{ person.age }}</td>
+      <td>{{ person.gmail }}</td>
+      <td>
+        <button (click)="viewDetails(person.id)">More</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

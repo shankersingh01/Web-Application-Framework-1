@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing System</title>
+    <script src="billing.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      input {
+        padding: 5px;
+      }
+      button {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>PES Billing System</h1>
+
+      <h2>Create Invoice</h2>
+      <form id="invoice-form">
+        <label for="product">Product:</label>
+        <select id="product" name="product" onchange="updatePrice()">
+          <option value="" data-price="0">Select a product</option>
+          <option value="Product A" data-price="10">Product A</option>
+          <option value="Product B" data-price="20">Product B</option>
+          <option value="Product C" data-price="30">Product C</option>
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          value="1"
+          oninput="updateTotal()"
+        />
+        <label for="price">Price per Unit:</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          min="0"
+          step="1"
+          readonly
+        />
+        <button type="button" onclick="addInvoice()">Add Invoice</button>
+      </form>
+      <h2>Invoice List</h2>
+      <table id="invoice-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price per Unit</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Invoice rows will be inserted here -->
+        </tbody>
+      </table>
+
+      <h3>Total Amount: Rs<span id="total-amount"> 0.00</span></h3>
+    </div>
+  </body>
+</html>

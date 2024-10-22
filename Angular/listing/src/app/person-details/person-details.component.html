@@ -1,0 +1,9 @@
+<!-- src/app/person-details/person-details.component.html -->
+<div *ngIf="person">
+  <h2>{{ person.name }}</h2>
+  <p>ID: {{ person.id }}</p>
+  <p>Contact: {{ person.contact }}</p>
+  <p>Age: {{ person.age }}</p>
+  <p>Gmail: {{ person.gmail }}</p>
+  <button (click)="goBack()">Back</button>
+</div>

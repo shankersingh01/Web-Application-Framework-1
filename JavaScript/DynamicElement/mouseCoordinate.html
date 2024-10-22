@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="info">
+      <p><strong>Client X:</strong><span id="clientX">0</span></p>
+      <p><strong>Screen X:</strong><span id="screenX">0</span></p>
+    </div>
+    <script>
+      //Function to update the coordinates displayed on the page
+      function updateCoordinates(event) {
+        document.getElementById("clientX").textContent = event.clientX;
+        document.getElementById("screenX").textContent = event.screenX;
+      }
+      //Add event listener for mouse movement
+      document.addEventListener("mousemove", updateCoordinates);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<h1>ngSwitch directive</h1>
+<ul [ngSwitch]="logInName">
+  <li *ngSwitchCase="'user'">
+    <p>User is logged in..</p>
+  </li>
+  <li *ngSwitchCase="'admin'">
+    <p>admin is logged in</p>
+  </li>
+  <li *ngSwitchDefault>
+    <p>Guest have logged in</p>
+  </li>
+</ul>
+
+
+
+<h1>Ng-If Implimentation</h1>
+<div *ngIf = "isloggedin;else logout">
+  <h2>welcome to login page!!!</h2>
+</div>
+<ng-template #logout>
+  <h2> you are not logged in</h2>
+</ng-template>
+<br><br>
+
+<h1>Ng-for Implimentation</h1>
+<ul *ngFor="let user of users">
+  <li>{{user}}</li>
+</ul>
+
+<h1>ngSwitch directive</h1>
+<ul [ngSwitch]="logInName">
+  
+</ul>
+
+
+
